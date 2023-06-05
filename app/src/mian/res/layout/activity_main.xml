@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
 
             android:background="#610A70"
-            app:title="Quran Majeed"
+            app:title="Quran App"
             app:titleTextColor="@color/white" />
 
     </RelativeLayout>

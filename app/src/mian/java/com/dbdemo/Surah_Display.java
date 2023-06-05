@@ -1,51 +1,51 @@
-package com.example.dbdemo;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-public class search_surahno extends AppCompatActivity {
-    public EditText textView;
-    public EditText textView2;
-    public Button query_btn;
-    public TextView resultText;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_surahno);
-        textView = findViewById(R.id.textView);
-        textView2 = findViewById(R.id.textView2);
-        query_btn = (Button)findViewById(R.id.query_btn);
-        resultText = findViewById(R.id.resultText);
-
-        //ayahs=findViewById(R.id.resultText);
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer"
+        tools:openDrawer="start"
+        tools:context=".MainActivity">
 
 
-        query_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getApplicationContext());
-                databaseAccess.open();
+<RelativeLayout
+        android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_10">
 
-                String an = textView.getText().toString();
-                String sn = textView2.getText().toString();
-                String arabict = databaseAccess.getAyah(Integer.valueOf(an), Integer.valueOf(sn));
+<androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-                resultText.setText(arabict);
+        android:background="#610A70"
+        app:title="Quran App"
+        app:titleTextColor="@color/white" />
 
-                databaseAccess.close();
-            }
-        });
+</RelativeLayout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    }
-}
+        tools:context=".MainActivity">
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/navigation_menu"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
