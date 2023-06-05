@@ -1,3 +1,22 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Android-specific files
+*.apk
+*.ap_
+
+# Compiled Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+build/
+
+# Local configuration files
+local.properties
+
+# Gradle files
+.gradle/
+/captures/
+/captures
