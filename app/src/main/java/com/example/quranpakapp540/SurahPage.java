@@ -1,4 +1,4 @@
-package com.example.quranpakapp522;
+package com.example.quranpakapp540;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.quranpakapp522.R;
 
 public class SurahPage extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.quranpakapp522;
+package com.example.quranpakapp540;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.quranpakapp522.R;
 
 import java.util.ArrayList;
 
